@@ -92,7 +92,7 @@ pacstrap /mnt base base-devel bash-completion btrfs-progs dosfstools grub efiboo
 
 generate fstab from mounted volumes
 ```
-genfstab -Lp /mnt /mnt/etc/fstab
+genfstab -Lp /mnt >> /mnt/etc/fstab
 ```
 
 open /mnt/etc/fstab  
