@@ -71,15 +71,15 @@ Create mount points for the subvolumes
 ```
 cd ..
 umount /mnt
-mount -o noatime,compress=lzo,space_cache,ssd,subol=@ /dev/sda2 /mnt
+mount -o noatime,compress=lzo,space_cache,ssd,subvol=@ /dev/sda2 /mnt
 
 mkdir -p /mnt/{boot/efi,home,var/log,var/cache/pacman/pkg,btrfs}
 
 mount /dev/sda1 /mnt/boot/efi
-mount -o noatime,compress=lzo,space_cache,ssd,subol=@home /dev/sda2 /mnt/home
-mount -o noatime,compress=lzo,space_cache,ssd,subol=@pkg /dev/sda2 /mnt/var/cache/pacman/pkg
-mount -o noatime,compress=lzo,space_cache,ssd,subol=@log /dev/sda2 /mnt/var/log
-mount -o noatime,compress=lzo,space_cache,ssd,subolid=5 /dev/sda2 /mnt/btrfs
+mount -o noatime,compress=lzo,space_cache,ssd,subvol=@home /dev/sda2 /mnt/home
+mount -o noatime,compress=lzo,space_cache,ssd,subvol=@pkg /dev/sda2 /mnt/var/cache/pacman/pkg
+mount -o noatime,compress=lzo,space_cache,ssd,subvol=@log /dev/sda2 /mnt/var/log
+mount -o noatime,compress=lzo,space_cache,ssd,subvolid=5 /dev/sda2 /mnt/btrfs
 ``` 
 
 ## Install Base System
