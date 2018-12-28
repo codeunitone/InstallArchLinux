@@ -100,7 +100,4 @@ open /mnt/etc/fstab
 
 ## Configure system
 
-```
-arch-chroot /mnt/
-
-```
+https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system
